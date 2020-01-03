@@ -7,7 +7,15 @@
 //
 
 import UIKit
+import WatchKit
 
 class TableRowController: NSObject {
 
+    @IBOutlet weak var imageView: WKInterfaceImage!
+    
+    @IBOutlet weak var lblName: WKInterfaceLabel!
+    
+    
+    
+    
 }

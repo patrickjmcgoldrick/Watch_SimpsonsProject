@@ -6,8 +6,43 @@
 //  Copyright © 2019 dirtbag. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class NetworkController: NSObject {
-
+class NetworkController {
+    
+    static let southParkCharacters = "https://api.duckduckgo.com/?q=south+park+characters&format=json"
+    
+    func getSouthParkCharacters(completion: @escaping ([Cast]?) -> ()) {
+        
+        let url = URL(string: NetworkController.southParkCharacters)
+        
+        guard let safeUrl = url else { return }
+        
+        let task = URLSession.shared.dataTask(with: safeUrl) { (data, response, error) in
+            
+            if let error = error {
+                print("error: \(error)")
+            } else {
+                if let response = response as? HTTPURLResponse {
+                    print("statusCode: \(response.statusCode)")
+                }
+                if let data = data {
+                    
+                    do {
+                        let jsonDecoder = JSONDecoder()
+                        
+                        let relatedTopics = try jsonDecoder.decode(RelatedTopics.self, from: data)
+                        
+                        completion(relatedTopics.relatedTopics)
+                        
+                    } catch {
+                        print("Error: \(error.localizedDescription)")
+                    }
+                }
+            }
+            
+        }
+        task.resume()
+    }
+    
 }

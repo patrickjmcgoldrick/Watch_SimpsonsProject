@@ -15,6 +15,13 @@
 		5E78BFE323B55376006E6C14 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BFE223B55376006E6C14 /* ExtensionDelegate.swift */; };
 		5E78BFE523B55376006E6C14 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BFE423B55376006E6C14 /* NotificationController.swift */; };
 		5E78BFE723B5537A006E6C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E78BFE623B5537A006E6C14 /* Assets.xcassets */; };
+		5E78BFF823B553A4006E6C14 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BFF723B553A4006E6C14 /* NetworkController.swift */; };
+		5E78BFFA23B55712006E6C14 /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BFF923B55712006E6C14 /* Cast.swift */; };
+		5E78BFFC23B5599B006E6C14 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BFFB23B5599B006E6C14 /* Icon.swift */; };
+		5E78BFFE23B559A6006E6C14 /* RelatedTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BFFD23B559A6006E6C14 /* RelatedTopics.swift */; };
+		5E78C00223B5A403006E6C14 /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78C00123B5A403006E6C14 /* TableRowController.swift */; };
+		5E78C00423B5EB99006E6C14 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78C00323B5EB99006E6C14 /* DetailInterfaceController.swift */; };
+		5E78C00623B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78C00523B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +79,13 @@
 		5E78BFE623B5537A006E6C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E78BFE823B5537A006E6C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E78BFE923B5537A006E6C14 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		5E78BFF723B553A4006E6C14 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		5E78BFF923B55712006E6C14 /* Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
+		5E78BFFB23B5599B006E6C14 /* Icon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		5E78BFFD23B559A6006E6C14 /* RelatedTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatedTopics.swift; sourceTree = "<group>"; };
+		5E78C00123B5A403006E6C14 /* TableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
+		5E78C00323B5EB99006E6C14 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
+		5E78C00523B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKInterfaceImage_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +132,18 @@
 			isa = PBXGroup;
 			children = (
 				5E78BFE023B55376006E6C14 /* InterfaceController.swift */,
+				5E78C00523B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift */,
+				5E78C00323B5EB99006E6C14 /* DetailInterfaceController.swift */,
+				5E78BFF723B553A4006E6C14 /* NetworkController.swift */,
+				5E78BFF923B55712006E6C14 /* Cast.swift */,
+				5E78BFFD23B559A6006E6C14 /* RelatedTopics.swift */,
+				5E78BFFB23B5599B006E6C14 /* Icon.swift */,
 				5E78BFE223B55376006E6C14 /* ExtensionDelegate.swift */,
 				5E78BFE423B55376006E6C14 /* NotificationController.swift */,
 				5E78BFE623B5537A006E6C14 /* Assets.xcassets */,
 				5E78BFE823B5537A006E6C14 /* Info.plist */,
 				5E78BFE923B5537A006E6C14 /* PushNotificationPayload.apns */,
+				5E78C00123B5A403006E6C14 /* TableRowController.swift */,
 			);
 			path = "Watch_SimpsonsProject WatchKit Extension";
 			sourceTree = "<group>";
@@ -254,9 +275,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E78BFFC23B5599B006E6C14 /* Icon.swift in Sources */,
+				5E78BFFE23B559A6006E6C14 /* RelatedTopics.swift in Sources */,
+				5E78BFF823B553A4006E6C14 /* NetworkController.swift in Sources */,
 				5E78BFE523B55376006E6C14 /* NotificationController.swift in Sources */,
+				5E78BFFA23B55712006E6C14 /* Cast.swift in Sources */,
 				5E78BFE323B55376006E6C14 /* ExtensionDelegate.swift in Sources */,
+				5E78C00423B5EB99006E6C14 /* DetailInterfaceController.swift in Sources */,
 				5E78BFE123B55376006E6C14 /* InterfaceController.swift in Sources */,
+				5E78C00623B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift in Sources */,
+				5E78C00223B5A403006E6C14 /* TableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

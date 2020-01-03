@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15702" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watch_SimpsonsProject_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="tBx-18-Py3">
+                            <items>
+                                <tableRow identifier="cell" id="qib-oh-pvn" customClass="TableRowController" customModule="Watch_SimpsonsProject_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="100" alignment="left" contentMode="scaleAspectFit" layout="vertical" id="LAy-NX-whi">
+                                        <items>
+                                            <imageView height="80" alignment="left" image="butters" contentMode="scaleAspectFit" id="iuu-m6-f56"/>
+                                            <label height="20" alignment="center" text="Char Name" textAlignment="center" id="Deh-Ag-K9J">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="imageView" destination="iuu-m6-f56" id="PyG-7u-8Ve"/>
+                                        <outlet property="lblName" destination="Deh-Ag-K9J" id="vWl-PB-phx"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="tBx-18-Py3" id="lWU-gz-W2d"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="30" y="103"/>
+        </scene>
+        <!--detailIC-->
+        <scene sceneID="NdT-3S-9Zf">
+            <objects>
+                <controller identifier="detailIC" id="ecT-Xg-qjn" customClass="DetailInterfaceController" customModule="Watch_SimpsonsProject_WatchKit_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Stuff about character" numberOfLines="0" id="SVp-LR-q7N"/>
+                    </items>
+                    <connections>
+                        <outlet property="lblDetail" destination="SVp-LR-q7N" id="Bjs-ol-YbU"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="303" y="103"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,16 +71,19 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Watch_SimpsonsProject_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Watch_SimpsonsProject_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="butters" width="132" height="200"/>
+    </resources>
 </document>
