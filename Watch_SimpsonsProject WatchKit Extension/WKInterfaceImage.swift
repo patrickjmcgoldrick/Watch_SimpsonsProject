@@ -11,8 +11,7 @@ import WatchKit
 
 extension WKInterfaceImage {
 
-    func downloadImageFrom(link:String) {
-        //} contentMode: UIView.ContentMode) {
+    func downloadImageFrom(link: String) {
         
         if link.isEmpty {
             self.setImage(UIImage(named: "butters"))
@@ -21,8 +20,7 @@ extension WKInterfaceImage {
         
         guard let url = URL(string: link) else { return }
 
-        URLSession.shared.dataTask( with: url, completionHandler: {
-            (data, response, error) -> Void in
+        URLSession.shared.dataTask( with: url, completionHandler: { (data, response, error) -> Void in
             DispatchQueue.main.async {
                 //self.contentMode =  contentMode
                 if let data = data {

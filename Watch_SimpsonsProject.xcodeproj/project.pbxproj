@@ -21,7 +21,7 @@
 		5E78BFFE23B559A6006E6C14 /* RelatedTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78BFFD23B559A6006E6C14 /* RelatedTopics.swift */; };
 		5E78C00223B5A403006E6C14 /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78C00123B5A403006E6C14 /* TableRowController.swift */; };
 		5E78C00423B5EB99006E6C14 /* DetailInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78C00323B5EB99006E6C14 /* DetailInterfaceController.swift */; };
-		5E78C00623B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78C00523B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift */; };
+		5E78C00623B5EFC0006E6C14 /* WKInterfaceImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E78C00523B5EFC0006E6C14 /* WKInterfaceImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,7 @@
 		5E78BFFD23B559A6006E6C14 /* RelatedTopics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelatedTopics.swift; sourceTree = "<group>"; };
 		5E78C00123B5A403006E6C14 /* TableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
 		5E78C00323B5EB99006E6C14 /* DetailInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInterfaceController.swift; sourceTree = "<group>"; };
-		5E78C00523B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKInterfaceImage_Extension.swift; sourceTree = "<group>"; };
+		5E78C00523B5EFC0006E6C14 /* WKInterfaceImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKInterfaceImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +131,8 @@
 		5E78BFDF23B55376006E6C14 /* Watch_SimpsonsProject WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				5EF5B6A423C50784000A0B51 /* Extensions */,
 				5E78BFE023B55376006E6C14 /* InterfaceController.swift */,
-				5E78C00523B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift */,
 				5E78C00323B5EB99006E6C14 /* DetailInterfaceController.swift */,
 				5E78BFF723B553A4006E6C14 /* NetworkController.swift */,
 				5E78BFF923B55712006E6C14 /* Cast.swift */,
@@ -148,6 +148,14 @@
 			path = "Watch_SimpsonsProject WatchKit Extension";
 			sourceTree = "<group>";
 		};
+		5EF5B6A423C50784000A0B51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E78C00523B5EFC0006E6C14 /* WKInterfaceImage.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +165,7 @@
 			buildPhases = (
 				5E78BFC623B55372006E6C14 /* Resources */,
 				5E78BFF323B5537A006E6C14 /* Embed Watch Content */,
+				5EF5B6A223C501E0000A0B51 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -270,6 +279,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5EF5B6A223C501E0000A0B51 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5E78BFD723B55376006E6C14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -283,7 +312,7 @@
 				5E78BFE323B55376006E6C14 /* ExtensionDelegate.swift in Sources */,
 				5E78C00423B5EB99006E6C14 /* DetailInterfaceController.swift in Sources */,
 				5E78BFE123B55376006E6C14 /* InterfaceController.swift in Sources */,
-				5E78C00623B5EFC0006E6C14 /* WKInterfaceImage_Extension.swift in Sources */,
+				5E78C00623B5EFC0006E6C14 /* WKInterfaceImage.swift in Sources */,
 				5E78C00223B5A403006E6C14 /* TableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

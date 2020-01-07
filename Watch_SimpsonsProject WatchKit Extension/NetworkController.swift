@@ -12,7 +12,7 @@ class NetworkController {
     
     static let southParkCharacters = "https://api.duckduckgo.com/?q=south+park+characters&format=json"
     
-    func getSouthParkCharacters(completion: @escaping ([Cast]?) -> ()) {
+    func getSouthParkCharacters(completion: @escaping ([Cast]?) -> Void) {
         
         let url = URL(string: NetworkController.southParkCharacters)
         

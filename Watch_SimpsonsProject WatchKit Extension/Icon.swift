@@ -12,11 +12,10 @@ class Icon: Decodable {
     var url: String?
     var width: String?
     var height: String?
-    
-    private enum CodingKeys : String, CodingKey {
+
+    private enum CodingKeys: String, CodingKey {
         case url = "URL"
         case width = "Width"
         case height = "Height"
     }
 }
-

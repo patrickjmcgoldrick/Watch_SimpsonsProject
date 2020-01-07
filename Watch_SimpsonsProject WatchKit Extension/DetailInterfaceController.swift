@@ -10,17 +10,15 @@ import UIKit
 import WatchKit
 
 class DetailInterfaceController: WKInterfaceController {
-    
+
     @IBOutlet weak var lblDetail: WKInterfaceLabel!
-    
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
-        
         if let cast = context as? Cast {
             lblDetail.setText(cast.text)
         }
-        
-        
+
     }
 }

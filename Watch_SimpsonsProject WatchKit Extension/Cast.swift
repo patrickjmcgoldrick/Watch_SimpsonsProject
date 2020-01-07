@@ -14,7 +14,7 @@ class Cast: Decodable {
     var icon: Icon?
     var firstUrl: String?
     
-    private enum CodingKeys : String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case result = "Result"
         case text = "Text"
         case icon = "Icon"
